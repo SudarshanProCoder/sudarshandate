@@ -276,6 +276,7 @@
 
     <script>
         let menu = document.querySelector('#menu-bars');
+        let mode = document.querySelector('#icon');
         let header = document.querySelector('header');
         let icon = document.querySelector('#icon');
 
@@ -294,17 +295,22 @@
             header.classList.toggle('active');
         }
 
+
+
         window.onscroll = () => {
             menu.classList.remove('fa-times');
             header.classList.remove('active');
+            mode.classList.remove('active')
         };
 
         var typed = new Typed('.typing-text', {
-            strings: ['back end developer', 'competitive programmer', 'hacker', 'web developer', 'app developer'],
+            strings: ['frontend developer', 'front end developer', 'backend developer', 'competitive programmer', 'hacker', 'web developer'],
             loop: true,
             typeSpeed: 150
 
         });
+
+        document.querySelector('.typing-text').style.color = "#990011FF";
 
         VanillaTilt.init(document.querySelectorAll('.tilt'), {
             max: 25
